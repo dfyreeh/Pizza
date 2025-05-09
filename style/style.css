@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+:root {
+  --background-color: rgb(255, 105, 0);
+}
+
+header {
+  padding: 10px 0;
+}
+
+.containerDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.logo p {
+  font-size: 19px;
+  font-weight: 600;
+  color: #7b7b7b;
+}
+
+.buttonBasket {
+  display: flex;
+  align-items: center;
+}
+
+.imglogo {
+  width: 280px;
+}
+
+.search {
+  width: 30%;
+  position: relative;
+  text-align: right;
+  display: inline;
+}
+
+.search input {
+  font-family: "Nunito", sans-serif;
+  outline: none;
+  border: none;
+  background-color: rgb(228, 228, 228);
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 30px;
+}
+
+.search img {
+  position: absolute;
+  text-align: center;
+  top: 12px;
+  left: 8px;
+  cursor: pointer;
+}
+
+.buttonBasket {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  color: rgb(255, 255, 255);
+}
+
+.buttonBasket span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.numberBasket {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  margin: 0;
+  font-weight: 500;
+}
+
+hr {
+  margin: 0 6px;
+  border: 1px solid rgb(255, 255, 255);
+  width: 1px;
+  height: 20px;
+  border-radius: 100px;
+}
+
+.arrowIcon {
+  width: 30px;
+  display: none;
+  margin-right: 4px;
+}
+
+.basketIcon {
+  transition: all 3s linear;
+  position: relative;
+  transition: all 0.4s linear;
+}
+
+.buttonBasket:hover .basketIcon {
+  display: none;
+}
+.buttonBasket:hover .numberBasket {
+  display: none;
+}
+
+.buttonBasket:hover .arrowIcon {
+  display: block;
+}
+
+/* nav */
+
+.nav {
+    padding: 5px 0;
+  width: 100%;
+  position: relative;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.841); /* напівпрозорий фон */
+  backdrop-filter: blur(7px); /* розмиття заднього фону */
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.nav ul li a {
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+  transition: all 0.2s linear;
+}
+
+.nav ul li:hover a {
+  color: var(--background-color);
+}
+
+/* slide */
+.container {
+  position: relative;
+}
+.card-slider-container {
+  overflow: hidden;
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  height: 360px;
+  border-radius: 10px;
+}
+
+.card-slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.card-slider-item {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 1rem;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(255, 105, 0);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.slider-btn:hover {
+  opacity: 1;
+}
+
+.slider-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.slider-btn.prev {
+  left: 20px;
+}
+
+.slider-btn.next {
+  right: 20px;
+}
+
+/* Pizza */
+
+.containerCard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.titlePizza {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.cardPi {
+  display: flex;
+  flex-flow: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  cursor: pointer;
+  width: 260px;
+}
+
+.cardImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  transition: all 0.2s linear;
+}
+
+.cardImg img {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  transition: all 0.2s linear;
+}
+
+.cardImg:hover img {
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+}
+
+.nameCar {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+
+.descriptionCar {
+  font-size: 15px;
+  line-height: 24px;
+  color: rgb(100, 100, 100);
+  font-weight: 500;
+}
+
+.footerCar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priceCar {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  margin-top: 5px;
+}
+
+.buttonCar {
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 20px;
+  color: #ffffff;
+  position: relative;
+  bottom: 0;
+  transition: all 0.2s linear;
+}
+
+.buttonCar:hover {
+  background-color: #7b7b7b;
+  bottom: 1px;
+}
