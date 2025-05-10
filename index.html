@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/basketModal.css" />
   </head>
   <body>
     <header class="header">
@@ -34,7 +35,7 @@
     <nav class="nav">
       <div class="container containerDisplay containerDisplayfixed">
         <ul>
-          <li><a href="">Піци</a></li>
+          <li><a href="#Pizza">Піци</a></li>
           <li><a href="">Закуски</a></li>
           <li><a href="">Десерти</a></li>
           <li><a href="">Соуси</a></li>
@@ -42,7 +43,11 @@
           <li><a href="">Напої</a></li>
         </ul>
         <div class="BasketContainer">
-          <button class="buttonBasket">
+          <button
+            class="buttonBasket"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu"
+          >
             <span>500 ₴</span>
             <hr />
             <img class="arrowIcon" src="./icon/icons8-направо-72.png" alt="" />
@@ -52,6 +57,205 @@
         </div>
       </div>
     </nav>
+    <section class="basketModal">
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasMenuLabel">
+            У кошику <span>3 товару</span>
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Закрити"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- cart-item 1 -->
+          <div class="cart-item">
+            <div class="cart-item-img">
+              <img
+                src="./img/Чорізо фреш.png"
+                alt="Чизбургер-пицца"
+                class="item-image"
+              />
+
+              <div class="item-info">
+                <div class="item-title">Чизбургер-пицца</div>
+                <div class="item-desc">Средняя 30 см, традиционное тесто</div>
+                <hr />
+              </div>
+            </div>
+            <div class="item-controls-container">
+              <div class="item-controls">
+                <button class="quantity-btn">−</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="item-price">360 ₴</div>
+            </div>
+          </div>
+          <!-- cart-item 2 -->
+          <div class="cart-item">
+            <div class="cart-item-img">
+              <img
+                src="./img/Чорізо фреш.png"
+                alt="Чизбургер-пицца"
+                class="item-image"
+              />
+
+              <div class="item-info">
+                <div class="item-title">Чизбургер-пицца</div>
+                <div class="item-desc">Средняя 30 см, традиционное тесто</div>
+                <hr />
+              </div>
+            </div>
+            <div class="item-controls-container">
+              <div class="item-controls">
+                <button class="quantity-btn">−</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="item-price">360 ₴</div>
+            </div>
+          </div>
+          <!-- cart-item 3 -->
+          <div class="cart-item">
+            <div class="cart-item-img">
+              <img
+                src="./img/Чорізо фреш.png"
+                alt="Чизбургер-пицца"
+                class="item-image"
+              />
+
+              <div class="item-info">
+                <div class="item-title">Чизбургер-пицца</div>
+                <div class="item-desc">Средняя 30 см, традиционное тесто</div>
+                <hr />
+              </div>
+            </div>
+            <div class="item-controls-container">
+              <div class="item-controls">
+                <button class="quantity-btn">−</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="item-price">360 ₴</div>
+            </div>
+          </div>
+          <!-- cart-item 4 -->
+          <div class="cart-item">
+            <div class="cart-item-img">
+              <img
+                src="./img/Чорізо фреш.png"
+                alt="Чизбургер-пицца"
+                class="item-image"
+              />
+
+              <div class="item-info">
+                <div class="item-title">Чизбургер-пицца</div>
+                <div class="item-desc">Средняя 30 см, традиционное тесто</div>
+                <hr />
+              </div>
+            </div>
+            <div class="item-controls-container">
+              <div class="item-controls">
+                <button class="quantity-btn">−</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="item-price">360 ₴</div>
+            </div>
+          </div>
+          <!-- cart-item 4 -->
+          <div class="cart-item">
+            <div class="cart-item-img">
+              <img
+                src="./img/Чорізо фреш.png"
+                alt="Чизбургер-пицца"
+                class="item-image"
+              />
+
+              <div class="item-info">
+                <div class="item-title">Чизбургер-пицца</div>
+                <div class="item-desc">Средняя 30 см, традиционное тесто</div>
+                <hr />
+              </div>
+            </div>
+            <div class="item-controls-container">
+              <div class="item-controls">
+                <button class="quantity-btn">−</button>
+                <span class="quantity">1</span>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="item-price">360 ₴</div>
+            </div>
+          </div>
+        </div>
+        <div class="orderBlock">
+          <div class="SummaryPrice">
+            <p>Ітог:</p>
+            <hr />
+            <samp>360 ₴</samp>
+          </div>
+          <button id="openSecondModalBtn" class="buttonOrder">
+            Оформити замовлення
+            <img src="./icon/Right_arrow.svg" alt="Right_arrow" />
+          </button>
+        </div>
+      </div>
+      <!-- Модальне вікно замовлення -->
+      <div
+        class="modal fade"
+        class="modal fade"
+        id="modalOrderMap"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content modal-content2">
+            <div class="modal-content-button">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Закрити"
+              ></button>
+            </div>
+            <div class="modal-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124312.5710541066!2d30.57679538215015!3d46.48938788267082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631e0d68420d7%3A0x276c70f0306f6223!2z0J_RltGG0LAgUGFyb3Zveg!5e0!3m2!1suk!2sde!4v1746898582260!5m2!1suk!2sde"
+                width="1200"
+                height="500"
+                style="border: 0; border-radius: 9px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="orderForm">
+                  <h1>Доставка кур'єром <img src="./icon/by_courier.png" alt=""></h1>
+                  <p>Залиште свої дані, і наш кур'єр привезе замовлення прямо до ваших дверей у зручний для вас час.</p>
+                <form class="form">
+                  <input placeholder="Місто, вулиця та будинок" type="text" />
+                  <input placeholder="Під'їзд" type="text" />
+                  <input placeholder="Код дверей" type="text" />
+                  <input placeholder="Поверх" type="text" />
+                  <input placeholder="Квартира" type="text" />
+                  <input placeholder="Коментар до замовлення" type="text" />
+                </form>
+                <button class="buttonOrderForm"  >Замовити сюди</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Модальне вікно замовлення -->
+    </section>
     <section class="slider">
       <div class="container">
         <button class="slider-btn prev" onclick="manualSlide(-1)">
@@ -122,7 +326,7 @@
         </button>
       </div>
     </section>
-    <section class="Pizza">
+    <section id="Pizza" class="Pizza">
       <div class="container">
         <h2 class="titlePizza">Піци</h2>
       </div>
@@ -134,17 +338,23 @@
               src="./img/Шинка і сир.png"
               alt="Піца 1"
               data-bs-toggle="modal"
-              data-bs-target="#modalPizza1"
+              data-bs-target="#modalPizza"
+              class="pizza-image"
+              data-size="25"
             />
           </div>
           <span class="nameCar">Піца з шинкою</span>
-          <div class="descriptionCar">Острые колбаски чоризо, острый перец халапеньо, соус барбекю, митболы из говядины, томаты, сладкий перец, красный лук, моцарелла, фирменный томатный соус</div>
+          <div class="descriptionCar">
+            Острые колбаски чоризо, острый перец халапеньо, соус барбекю,
+            митболы из говядины, томаты, сладкий перец, красный лук, моцарелла,
+            фирменный томатный соус
+          </div>
           <footer class="footerCar">
             <div class="priceCar">від 360 ₴</div>
             <button
               class="buttonCar"
               data-bs-toggle="modal"
-              data-bs-target="#modalPizza1"
+              data-bs-target="#modalPizza2"
             >
               Вибрати
             </button>
@@ -153,13 +363,13 @@
           <!-- Модалка 1 -->
           <div
             class="modal fade"
-            id="modalPizza1"
+            id="modalPizza"
             tabindex="-1"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content p-3">
-                <div class="d-flex justify-content-end">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-content-button">
                   <button
                     type="button"
                     class="btn-close"
@@ -167,7 +377,39 @@
                     aria-label="Закрити"
                   ></button>
                 </div>
-                <p class="mt-2">Це модальне вікно для Піци з шинкою.</p>
+                <div class="modal-container">
+                  <div class="modalImg">
+                    <img
+                      src="./img/Шинка і сир.png"
+                      alt="Піца"
+                      id="modalPizzaImage"
+                      class="img-fluid modal-pizza-img"
+                    />
+                  </div>
+                  <div class="modalInformation">
+                    <h1>Піца з шинкою</h1>
+                    <div class="modalInformationDiv-1">
+                      <span
+                        ><span class="selected-size1">25 см,</span> традиционное
+                        тесто <span class="selected-size">25,</span> 610 г</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        >Креветки, томаты, шампиньоны, соус песто, моцарелла,
+                        итальянские травы, фирменный томатный соус</span
+                      >
+                    </div>
+                    <div class="size-selector">
+                      <div class="size-option active" data-size="25">25 см</div>
+                      <div class="size-option" data-size="30">30 см</div>
+                      <div class="size-option" data-size="35">35 см</div>
+                    </div>
+                    <button class="modalInformationButton">
+                      У кошик за 360 ₴
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -176,16 +418,19 @@
         <div class="cardPi">
           <div class="cardImg">
             <img
-              src="img/Чорізо фреш.png"
+              src="./img/Говядина з песто.png"
               alt="Піца 1"
               data-bs-toggle="modal"
               data-bs-target="#modalPizza2"
+              class="pizza-image"
+              data-size="25"
             />
           </div>
           <span class="nameCar">Піца з шинкою</span>
           <div class="descriptionCar">
-            Острые колбаски чоризо, соус барбекю, томаты, красный лук,
-            моцарелла, фирменный томатный соус
+            Острые колбаски чоризо, острый перец халапеньо, соус барбекю,
+            митболы из говядины, томаты, сладкий перец, красный лук, моцарелла,
+            фирменный томатный соус
           </div>
           <footer class="footerCar">
             <div class="priceCar">від 360 ₴</div>
@@ -205,9 +450,9 @@
             tabindex="-1"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content p-3">
-                <div class="d-flex justify-content-end">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-content-button">
                   <button
                     type="button"
                     class="btn-close"
@@ -215,7 +460,39 @@
                     aria-label="Закрити"
                   ></button>
                 </div>
-                <p class="mt-2">Це модальне вікно для Піци з шинкою.222</p>
+                <div class="modal-container">
+                  <div class="modalImg">
+                    <img
+                      src="./img/Говядина з песто.png"
+                      alt="Піца"
+                      id="modalPizzaImage"
+                      class="img-fluid modal-pizza-img"
+                    />
+                  </div>
+                  <div class="modalInformation">
+                    <h1>Піца з шинкою</h1>
+                    <div class="modalInformationDiv-1">
+                      <span
+                        ><span class="selected-size1">25 см,</span> традиционное
+                        тесто <span class="selected-size">25,</span> 610 г</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        >Креветки, томаты, шампиньоны, соус песто, моцарелла,
+                        итальянские травы, фирменный томатный соус</span
+                      >
+                    </div>
+                    <div class="size-selector">
+                      <div class="size-option active" data-size="25">25 см</div>
+                      <div class="size-option" data-size="30">30 см</div>
+                      <div class="size-option" data-size="35">35 см</div>
+                    </div>
+                    <button class="modalInformationButton">
+                      У кошик за 360 ₴
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -224,14 +501,20 @@
         <div class="cardPi">
           <div class="cardImg">
             <img
-              src="./img/Шинка і сир.png"
+              src="./img/Чорізо фреш.png"
               alt="Піца 1"
               data-bs-toggle="modal"
               data-bs-target="#modalPizza3"
+              class="pizza-image"
+              data-size="25"
             />
           </div>
           <span class="nameCar">Піца з шинкою</span>
-          <div class="descriptionCar">Шинка, моцарела, соус альфредо</div>
+          <div class="descriptionCar">
+            Острые колбаски чоризо, острый перец халапеньо, соус барбекю,
+            митболы из говядины, томаты, сладкий перец, красный лук, моцарелла,
+            фирменный томатный соус
+          </div>
           <footer class="footerCar">
             <div class="priceCar">від 360 ₴</div>
             <button
@@ -250,9 +533,9 @@
             tabindex="-1"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content p-3">
-                <div class="d-flex justify-content-end">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-content-button">
                   <button
                     type="button"
                     class="btn-close"
@@ -260,7 +543,39 @@
                     aria-label="Закрити"
                   ></button>
                 </div>
-                <p class="mt-2">Це модальне вікно для Піци з шинкою.333</p>
+                <div class="modal-container">
+                  <div class="modalImg">
+                    <img
+                      src="./img/Чорізо фреш.png"
+                      alt="Піца"
+                      id="modalPizzaImage"
+                      class="img-fluid modal-pizza-img"
+                    />
+                  </div>
+                  <div class="modalInformation">
+                    <h1>Піца з шинкою</h1>
+                    <div class="modalInformationDiv-1">
+                      <span
+                        ><span class="selected-size1">25 см,</span> традиционное
+                        тесто <span class="selected-size">25,</span> 610 г</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        >Креветки, томаты, шампиньоны, соус песто, моцарелла,
+                        итальянские травы, фирменный томатный соус</span
+                      >
+                    </div>
+                    <div class="size-selector">
+                      <div class="size-option active" data-size="25">25 см</div>
+                      <div class="size-option" data-size="30">30 см</div>
+                      <div class="size-option" data-size="35">35 см</div>
+                    </div>
+                    <button class="modalInformationButton">
+                      У кошик за 360 ₴
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -269,17 +584,19 @@
         <div class="cardPi">
           <div class="cardImg">
             <img
-              src="./img/Шинка і сир.png"
+              src="./img/М'ясний мікс з яловичиною та ковбасками.png"
               alt="Піца 1"
               data-bs-toggle="modal"
               data-bs-target="#modalPizza4"
+              class="pizza-image"
+              data-size="25"
             />
           </div>
           <span class="nameCar">Піца з шинкою</span>
           <div class="descriptionCar">
-            Увеличенная порция моцареллы, ветчина, пикантная пепперони, кубики
-            брынзы, томаты, шампиньоны, итальянские травы, фирменный томатный
-            соус
+            Острые колбаски чоризо, острый перец халапеньо, соус барбекю,
+            митболы из говядины, томаты, сладкий перец, красный лук, моцарелла,
+            фирменный томатный соус
           </div>
           <footer class="footerCar">
             <div class="priceCar">від 360 ₴</div>
@@ -299,9 +616,9 @@
             tabindex="-1"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content p-3">
-                <div class="d-flex justify-content-end">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-content-button">
                   <button
                     type="button"
                     class="btn-close"
@@ -309,7 +626,39 @@
                     aria-label="Закрити"
                   ></button>
                 </div>
-                <p class="mt-2">Це модальне вікно для Піци з шинкою.444</p>
+                <div class="modal-container">
+                  <div class="modalImg">
+                    <img
+                      src="./img/М'ясний мікс з яловичиною та ковбасками.png"
+                      alt="Піца"
+                      id="modalPizzaImage"
+                      class="img-fluid modal-pizza-img"
+                    />
+                  </div>
+                  <div class="modalInformation">
+                    <h1>Піца з шинкою</h1>
+                    <div class="modalInformationDiv-1">
+                      <span
+                        ><span class="selected-size1">25 см,</span> традиционное
+                        тесто <span class="selected-size">25,</span> 610 г</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        >Креветки, томаты, шампиньоны, соус песто, моцарелла,
+                        итальянские травы, фирменный томатный соус</span
+                      >
+                    </div>
+                    <div class="size-selector">
+                      <div class="size-option active" data-size="25">25 см</div>
+                      <div class="size-option" data-size="30">30 см</div>
+                      <div class="size-option" data-size="35">35 см</div>
+                    </div>
+                    <button class="modalInformationButton">
+                      У кошик за 360 ₴
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -318,15 +667,18 @@
         <div class="cardPi">
           <div class="cardImg">
             <img
-              src="./img/Шинка і сир.png"
+              src="./img/Бефстроганов.png"
               alt="Піца 1"
               data-bs-toggle="modal"
               data-bs-target="#modalPizza5"
+              class="pizza-image"
+              data-size="25"
             />
           </div>
           <span class="nameCar">Піца з шинкою</span>
           <div class="descriptionCar">
-            Двойная порция пикантной пепперони, увеличенная порция моцареллы,
+            Острые колбаски чоризо, острый перец халапеньо, соус барбекю,
+            митболы из говядины, томаты, сладкий перец, красный лук, моцарелла,
             фирменный томатный соус
           </div>
           <footer class="footerCar">
@@ -347,9 +699,9 @@
             tabindex="-1"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content p-3">
-                <div class="d-flex justify-content-end">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-content-button">
                   <button
                     type="button"
                     class="btn-close"
@@ -357,7 +709,39 @@
                     aria-label="Закрити"
                   ></button>
                 </div>
-                <p class="mt-2">Це модальне вікно для Піци з шинкою.555</p>
+                <div class="modal-container">
+                  <div class="modalImg">
+                    <img
+                      src="./img/Бефстроганов.png"
+                      alt="Піца"
+                      id="modalPizzaImage"
+                      class="img-fluid modal-pizza-img"
+                    />
+                  </div>
+                  <div class="modalInformation">
+                    <h1>Піца з шинкою</h1>
+                    <div class="modalInformationDiv-1">
+                      <span
+                        ><span class="selected-size1">25 см,</span> традиционное
+                        тесто <span class="selected-size">25,</span> 610 г</span
+                      >
+                    </div>
+                    <div>
+                      <span
+                        >Креветки, томаты, шампиньоны, соус песто, моцарелла,
+                        итальянские травы, фирменный томатный соус</span
+                      >
+                    </div>
+                    <div class="size-selector">
+                      <div class="size-option active" data-size="25">25 см</div>
+                      <div class="size-option" data-size="30">30 см</div>
+                      <div class="size-option" data-size="35">35 см</div>
+                    </div>
+                    <button class="modalInformationButton">
+                      У кошик за 360 ₴
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
