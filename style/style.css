@@ -31,13 +31,16 @@ header {
 .logo {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .logo p {
-  font-size: 19px;
+    width: 201px;
+  font-size: 17px;
   font-weight: 600;
   color: #7b7b7b;
+  position: relative;
+  left: 56px;
+  top: -10px;
 }
 
 .buttonBasket {
@@ -46,7 +49,7 @@ header {
 }
 
 .imglogo {
-  width: 280px;
+  width: 300px;
 }
 
 .search {
