@@ -1,3 +1,4 @@
+// slider
 const sliderTrack = document.getElementById("sliderTrack");
 const btnPrev = document.querySelector(".slider-btn.prev");
 const btnNext = document.querySelector(".slider-btn.next");
@@ -71,7 +72,7 @@ window.addEventListener("load", () => {
 
 window.addEventListener("resize", () => slide(0));
 
-// 
+// nav
 document.addEventListener("DOMContentLoaded", () => {
   const menuLinks = document.querySelectorAll('#menu a');
   const sections = Array.from(menuLinks).map(link => {
