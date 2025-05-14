@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 });
+ 
 
 const btn = document.getElementById("openSecondModalBtn");
 const offcanvasEl = document.querySelector(".offcanvas");

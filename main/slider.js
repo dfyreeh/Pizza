@@ -70,3 +70,31 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("resize", () => slide(0));
+
+// 
+document.addEventListener("DOMContentLoaded", () => {
+  const menuLinks = document.querySelectorAll('#menu a');
+  const sections = Array.from(menuLinks).map(link => {
+    const id = link.getAttribute('href').slice(1);
+    return document.getElementById(id);
+  });
+
+  function onScroll() {
+    const scrollPosition = window.scrollY + 150; 
+
+    let currentId = '';
+    sections.forEach(section => {
+      if (section.offsetTop <= scrollPosition) {
+        currentId = section.id;
+      }
+    });
+
+    menuLinks.forEach(link => {
+      const linkId = link.getAttribute('href').slice(1);
+      link.classList.toggle('active', linkId === currentId);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll);
+  onScroll();  
+});

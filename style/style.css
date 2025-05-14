@@ -144,6 +144,8 @@ hr {
   backdrop-filter: blur(7px);
 }
 
+
+
 .nav ul {
   list-style: none;
   padding: 0;
@@ -159,6 +161,9 @@ hr {
   transition: all 0.2s linear;
 }
 
+#menu li a.active {
+    color: var(--background-color);
+  }
 .nav ul li:hover a {
   color: var(--background-color);
 }
